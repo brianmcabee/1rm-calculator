@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1RM Calculator</title>
+
+    <!-- load css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- load vue -->
+    <script src="https://unpkg.com/vue@next" defer></script>
+
+    <!-- load js -->
+    <script src="app.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <h1>One Rep Max Calculator</h1>
+
+        <!-- Unit of measurement portion -->
+        <div class="unit-of-measurement">
+            <fieldset>
+                <legend>Unit of Measurement</legend>
+                <input type="radio" name="unit" id="lbs-measurement" value="lbs" v-model="selectedUnit" checked>
+                <label for="lbs-measurement">{{ unit_of_measurement[0] }}</label>
+
+                <input type="radio" name="unit" id="kgs-measurement" value="kg" v-model="selectedUnit">
+                <label for="kg-measurement">{{ unit_of_measurement[1] }}</label>
+
+                <p>Selected: {{ selectedUnit}}</p>
+            </fieldset>
+        </div>
+
+        <!-- weight lifted  -->
+        <label class="large-label" for="weight-lifted">Weight Lifted ({{ selectedUnit }})</label>
+        <input type="text" name="weight" id="weight-lifted" autocomplete="off">
+
+        <br>
+
+        <!-- reps completed section -->
+        <label for="">Reps Completed</label>
+        <select name="" id="" v-model="selectedReps">
+            <option disabled value="">Select One</option>
+            <option v-for="n in 10" v-bind:value="n">{{n}}</option>
+        </select>
+        <p>Selected Reps {{selectedReps}}</p>
+
+        <button>Calculate</button>
+        <p> Your 1RM is: xxx {{selectedUnit}}</p>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

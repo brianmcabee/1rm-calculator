@@ -1,0 +1,8 @@
+#app {
+    border: 1px solid;
+    border-radius: 12px;
+}
+
+.large-label {
+    font-size: large;
+}
