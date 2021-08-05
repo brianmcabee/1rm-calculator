@@ -40,20 +40,21 @@
 
         <!-- weight lifted  -->
         <label class="large-label" for="weight-lifted">Weight Lifted ({{ selectedUnit }})</label>
-        <input type="text" name="weight" id="weight-lifted" autocomplete="off">
-
+        <input v-on:input="setWeight" type="number" step="0.25" min="0" max="999999" name="weight" id="weight-lifted" autocomplete="off" required>
+        
         <br>
 
         <!-- reps completed section -->
-        <label for="">Reps Completed</label>
+        <label class="large-label" for="">Reps Completed</label>
         <select name="" id="" v-model="selectedReps">
             <option disabled value="">Select One</option>
             <option v-for="n in 10" v-bind:value="n">{{n}}</option>
         </select>
-        <p>Selected Reps {{selectedReps}}</p>
 
-        <button>Calculate</button>
-        <p> Your 1RM is: xxx {{selectedUnit}}</p>
+        <br>
+
+        <button v-on:click="calculateOneRepMax(enteredWeight, selectedReps)">Calculate</button>
+        <p> Your <em>estimated</em> 1RM is: {{ oneRepMax }} {{selectedUnit}}</p>
 
 
 
