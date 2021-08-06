@@ -152,3 +152,16 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+/* iphone media query resize */
+/* Portrait and Landscape */
+@media only screen and (max-width: 1200px) {
+
+    #app {
+      width: 80%;
+    }
+
+    .large-label {
+      font-size: 1.5rem;
+    }
+}
