@@ -6,7 +6,6 @@ const app = Vue.createApp({
             enteredWeight: 0,
             selectedReps: 0,
         }
-
     },
     computed: {
         calculatedOneRepMax() {
@@ -22,7 +21,7 @@ const app = Vue.createApp({
             if (reps === 0 || weight === 0) {
                 return ''
             } else {
-                return Math.round(weight * rm_multiplier[reps - 1]) + this.selectedUnit;
+                return Math.round(weight * rm_multiplier[reps - 1]) + ' ' + this.selectedUnit;
             }
         }
     },
@@ -31,8 +30,6 @@ const app = Vue.createApp({
             this.enteredWeight = event.target.value;
         }
     }
-
-
 });
 
 app.mount('#app');

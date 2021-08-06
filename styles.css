@@ -1,13 +1,16 @@
 body {
-  background-color: #3F72AF;
+  background-color: #3f72af;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #app {
-  border: 1px solid;
+  /* border: 1px solid grey; */
   border-radius: 12px;
-  width: 50%;
+  width: 45%;
   margin: 2% auto;
-  background-color: #F9F7F7;
+  background-color: #f9f7f7;
+  -webkit-box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.61);
+  box-shadow: -2px 2px 6px 0px rgba(0, 0, 0, 0.61);
 }
 
 /* grid.layoutit.com?id=H7SdsCV*/
@@ -15,18 +18,19 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 0.5fr repeat(3, 1fr);
-  gap: 0px 0px;
+  gap: 9px 0px;
   grid-template-areas:
-      "h h"
-      "ts ts"
-      "l1 i1"
-      "l2 i2"
-      "rm-txt rm-output";
+    "h h"
+    "ts ts"
+    "l1 i1"
+    "l2 i2"
+    "rm-txt rm-output";
 }
 
 h1 {
   text-align: center;
   grid-area: h;
+  font-weight: 700;
 }
 
 .toggle-switch {
@@ -34,10 +38,8 @@ h1 {
   justify-self: center;
   align-self: center;
   display: flex;
-  margin-bottom: 5%;
   overflow: hidden;
 }
-
 
 .toggle-switch input {
   position: absolute !important;
@@ -65,9 +67,9 @@ h1 {
   cursor: pointer;
 }
 
-.toggle-switch input:checked+label {
-  background-color: #3F72AF;
-  color: #DBE2EF;
+.toggle-switch input:checked + label {
+  background-color: #3f72af;
+  color: #dbe2ef;
   box-shadow: none;
 }
 
@@ -78,8 +80,6 @@ h1 {
 .toggle-switch label:last-of-type {
   border-radius: 0 4px 4px 0;
 }
-
-
 
 .l1 {
   grid-area: l1;
@@ -101,34 +101,34 @@ h1 {
 .l1,
 .l2 {
   justify-self: end;
-  align-self: start;
+  align-self: center;
 }
 
 /* input box positioning */
 .i1,
 .i2 {
-  /*   justify-self: center; */
   padding-left: 15px;
-  align-self: start;
+  align-self: center;
 }
 
 .rm-txt {
   grid-area: rm-txt;
   justify-self: right;
-  align-self: center;
-  padding-right: 5%;
+  align-self: start;
   font-size: 1.25rem;
 }
 
 .rm-output {
   grid-area: rm-output;
   justify-self: center;
-  font-size: 1.5rem;
+  align-self: start;
+  margin-right: 7%;
+  font-size: 3rem;
   color: #154682;
 }
 
 .large-label {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .item {
@@ -138,7 +138,7 @@ h1 {
 input,
 select {
   font-size: 1.5rem;
-  width:
+  width: 50%;
 }
 
 /* Chrome, Safari, Edge, Opera */
