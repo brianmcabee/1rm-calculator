@@ -154,13 +154,13 @@ input[type="number"] {
 }
 
 /* iphone media query resize */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 501px) {
   #app {
-    width: 80%;
+    width: 98%;
   }
 
   .large-label {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .l1,
@@ -180,7 +180,7 @@ input[type="number"] {
   }
 }
 /* Portrait and Landscape */
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 502px) and (max-width: 1200px) {
   #app {
     width: 80%;
   }
