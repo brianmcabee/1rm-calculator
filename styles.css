@@ -153,10 +153,21 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+/* for medium-ish sized screens like ipads */
+@media only screen and (min-width: 816px) and (max-width: 1200px) {
+  #app {
+    width: 80%;
+  }
+}
+
 /* iphone media query resize */
 @media only screen and (max-width: 815px) {
   #app {
     width: 98%;
+  }
+
+  h1 {
+    font-size: 2.5rem;;
   }
 
   .large-label {
@@ -179,9 +190,4 @@ input[type="number"] {
     width: 60%;
   }
 }
-/* Portrait and Landscape */
-@media only screen and (min-width: 816px) and (max-width: 1200px) {
-  #app {
-    /* width: 80%; */
-  }
-}
+
