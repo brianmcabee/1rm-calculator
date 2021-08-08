@@ -158,12 +158,22 @@ input[type="number"] {
   #app {
     width: 80%;
   }
+
+  h1 {
+    font-size: 2.5rem;;
+  }
 }
 
 /* iphone media query resize */
 @media only screen and (max-width: 815px) {
   #app {
     width: 98%;
+  }
+
+  .container {
+    /* change spacing for grid rows  */
+    grid-template-rows: 1fr 0.25fr repeat(3, 1fr);
+    gap: 0px 0px;
   }
 
   h1 {
