@@ -172,7 +172,7 @@ input[type="number"] {
 
   .container {
     /* change spacing for grid rows  */
-    grid-template-rows: 1fr 0.25fr repeat(3, 1fr);
+    grid-template-rows: 1fr 0.25fr repeat(2, 1fr) .6fr;
     gap: 0px 0px;
   }
 
